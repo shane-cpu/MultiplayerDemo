@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=3 uid="uid://do5bgyafuoiyp"]
+
+[ext_resource type="Script" path="res://GameEntities/PlayerAssets/player_controller.gd" id="1_42sb2"]
+
+[node name="PlayerTemplate" type="Node3D"]
+rotation_edit_mode = 1
+script = ExtResource("1_42sb2")
+
+[node name="HeadController" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.00317, 0)
+
+[node name="Camera3D" type="Camera3D" parent="HeadController"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, -0.00316775, 0)
+
+[node name="Head" type="CSGSphere3D" parent="HeadController"]
+transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, 0, -0.00616151, 0)
+
+[node name="Nose" type="CSGSphere3D" parent="HeadController"]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0.415877, -0.00616151, 0)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.494687, 0)
+size = Vector3(0.25, 1, 0.25)
